@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Robot3T - manual control</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="pic/logo-robot3t-news-h-1.png">
+    <link rel="stylesheet" type="text/css" href="New_web_css_ver_2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="body-block">
+        <div class="header">
+            <div class="logo header-item">
+                <a href="https://robot3t.com/"><img src="pic/logo-robot3t-news-h.png" alt="logo"
+                        style="position: absolute; align-items: center; width: 65%;"></a>
+            </div>
+            <div class="menu header-item">
+                <div class="container menu-item" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <div class="  menu-item" id="nav">
+                    <div class="Control-nav nav-li">Manual control</div>
+                    <div class="Console-nav nav-li">Console</div>
+                    <div class="Home-nav nav-li">Home
+                        <a href="index.html"></a>
+                    </div>
+                </div>
+            </div>
+
+            <!--id header end-->
+        </div>
+        <div id="tittle-1">
+            <div class="tittle tittle-item">Manual control</div>
+            <div class="speed tittle-item">
+                <div id="button-1" class="speed-item" onclick="init_button_2_1()">-</div>
+                <div id="button-2" class="speed-item" onclick="init_button_2_1()">+</div>
+                <div class="speed-text speed-item">Speed</div>
+                <div class="speed-value speed-item"><span id="counter">50</span>%</div>
+            </div>
+        </div>
+        <div id="line"></div>
+        <div class="layout">
+            <div id="body-block-layout">
+                <div class="control-tittle item">Control</div>
+                <div class="control item">
+                    <div id="control-Button-Left">
+                        <img class="visible img" id="img1" src="pic/arrow-left.png" onclick="init_x_button()" alt="">
+                    </div>
+                    <div id="control-Button-Down">
+                        <img class="visible img" id="img3" src="pic/arrow-backward (1).png" onclick="init_y_button()"
+                            alt="">
+                    </div>
+                    <div id="control-Button-Right">
+                        <img class="visible img" id="img5" src="pic/arrow_right.png" onclick="init_x_button()" alt="">
+                    </div>
+                    <div id="control-Button-Up">
+                        <img class="visible img" id="img7" src="pic/arrow-forward (1).png" onclick="init_y_button()"
+                            alt="">
+                    </div>
+                    <div id="control-Button-Up-v2">
+                        <img class="visible img-1" id="img9" src="pic/arrow-up.png" onclick="init_z_button()" alt="">
+                    </div>
+                    <div id="control-Button-Down-v2">
+                        <img class="visible img-1" id="img11" src="pic/arrow-down.png" onclick="init_z_button()" alt="">
+                    </div>
+                    <div id="control-Button-turn-left-v2">
+                        <img class="visible img-2" id="img13" src="pic/curve-arrow-down (2).png"
+                            onclick="init_roll_button()" alt="">
+                    </div>
+                    <div id="control-Button-turn-right-v2">
+                        <img class="visible img-2" id="img15" src="pic/curve-arrow-down2 (1).png"
+                            onclick="init_roll_button()" alt="">
+                    </div>
+                    <div id="control-Button-turn-arrow-left-v2">
+                        <img class="visible img-2" id="img17" src="pic/curve-arrow-left (1).png"
+                            onclick="init_pitch_button()" alt="">
+                    </div>
+                    <div id="control-Button-turn-arrow-right-v2">
+                        <img class="visible img-2" id="img19" src="pic/arrow-curve-right.png"
+                            onclick="init_pitch_button()" alt="">
+                    </div>
+                </div>
+                <div class="Position-tittle item">Position</div>
+                <div class="Position item">
+                    <div class="Axis-val Axis-val-1">
+                        <div class="Axis-1-tittle Axis-item">Axis X</div>
+                        <input id="number-21" class="Axis-item" contenteditable="false" value="0.0000"
+                            inputmode="numeric" type=" number" step="0.01">
+                    </div>
+                    <div class="Axis-val Axis-val-2">
+                        <div class="Axis-2-tittle Axis-item">Axis Y</div>
+                        <input id="number-22" class="Axis-item" contenteditable="true" value="0.0000"
+                            inputmode="numeric" type=" number" step="0.01">
+                    </div>
+                    <div class="Axis-val Axis-val-3">
+                        <div class="Axis-3-tittle Axis-item">Axis Z</div>
+                        <input id="number-23" class="Axis-item" contenteditable="true" value="0.0000"
+                            inputmode="numeric" type=" number" step="0.01">
+                    </div>
+                    <div class="Axis-val Axis-val-4">
+                        <div class="Axis-4-tittle Axis-item">Axis A</div>
+                        <input id="number-24" class="Axis-item" contenteditable="true" value="0.0000"
+                            inputmode="numeric" type=" number" step="0.01">
+                    </div>
+                    <div class="Axis-val Axis-val-5">
+                        <div class="Axis-5-tittle Axis-item">Axis B</div>
+                        <input id="number-25" class="Axis-item" contenteditable="true" value="0.0000"
+                            inputmode="numeric" type=" number" step="0.01">
+                    </div>
+
+                </div>
+                <div class="Joint-tittle item">Joint</div>
+                <div class="Joint item">
+                    <div class="Joint-val Joint-val-1">
+                        <div class="Joint-1-tittle Joint-item">Joint 1</div>
+                        <div id="button-11" class="Joint-item" onclick="init_button_11_12()">+</div>
+                        <input id="number-10" class="Joint-item" contenteditable="true" value="0.0000"
+                            inputmode="numeric" type=" number" step="0.01">
+                        <div id="button-12" class="Joint-item" onclick="init_button_11_12()">-</div>
+                    </div>
+                    <div class="Joint-val Joint-val-2">
+                        <div class="Joint-2-tittle Joint-item">Joint 2</div>
+                        <div id="button-13" class="Joint-item" onclick="init_button_13_14()">+</div>
+                        <input id="number-11" class="Joint-item" contenteditable="true" value="0.0000"
+                            inputmode="numeric" type=" number" step="0.01">
+                        <div id="button-14" class="Joint-item" onclick="init_button_13_14()">-</div>
+                    </div>
+                    <div class="Joint-val Joint-val-3">
+                        <div class="Joint-3-tittle Joint-item">Joint 3</div>
+                        <div id="button-15" class="Joint-item" onclick="init_button_15_16()">+</div>
+                        <input id="number-12" class="Joint-item" contenteditable="true" value="0.0000"
+                            inputmode="numeric" type=" number" step="0.01">
+                        <div id="button-16" class="Joint-item" onclick="init_button_15_16()">-</div>
+                    </div>
+                    <div class="Joint-val Joint-val-4">
+                        <div class="Joint-4-tittle Joint-item">Joint 4</div>
+                        <div id="button-17" class="Joint-item" onclick="init_button_17_18()">+</div>
+                        <input id="number-13" class="Joint-item" contenteditable="true" value="0.0000"
+                            inputmode="numeric" type=" number" step="0.01">
+                        <div id="button-18" class="Joint-item" onclick="init_button_17_18()">-</div>
+                    </div>
+                    <div class="Joint-val Joint-val-5">
+                        <div class="Joint-5-tittle Joint-item">Joint 5</div>
+                        <div id="button-19" class="Joint-item" onclick="init_button_19_20()">+</div>
+                        <input id="number-14" class="Joint-item" contenteditable="true" value="0.0000"
+                            inputmode="numeric" type=" number" step="0.01">
+                        <div id="button-20" class="Joint-item" onclick="init_button_19_20()">-</div>
+                    </div>
+
+                </div>
+
+                <div class="Move-type">
+                    <button id="btn" class="btn" onclick="toggleButton()">PAUSE
+                    </button>
+                    <div id="Move-type-tittle">Move Type</div>
+                    <div id="Continous" class="control-btn" onclick="selectButtonContinous(this, 0.1)">Continous</div>
+                    <div id="0.1" class="control-btn" onclick="selectButtonNoneContinous(this, 0.1)">0.1</div>
+                    <div id="0.01" class="control-btn" onclick="selectButtonNoneContinous(this, 0.01)">0.01</div>
+                    <div id="0.001" class="control-btn" onclick="selectButtonNoneContinous(this, 0.001)">0.001</div>
+                    <div id="Custom" class="control-btn" onclick="selectCustomButton(this)">Custom
+                        <input type="number" id="customValueInput" placeholder="Value" style="display: none;"
+                            onkeypress="handleKeyPress(event)">
+
+                    </div>
+                </div>
+                <div class="Status-tittle item">Settings</div>
+                <div class="Status item">
+                    <div id="Port" class="Status-item">
+                        <div class="Tittle-port">Port</div>
+                        <input type="text" id="Port-value" contenteditable="true" value="127.0.0.1:5000"
+                            placeholder="Enter value:">
+                        <div class="Connected-Value">Connected</div>
+                    </div>
+                    <div id="Lock-mode" class="Status-item">
+                        <div id="Lock-mode-tittle">Lock Controller</div>
+                        <div id="Lock-mode-Value" class="value">Locked</div>
+                        <div id="Lock-mode-Button-lock" onclick="lockButtonClick()">Lock</div>
+                        <div id="Lock-mode-Button-unlock" onclick="unlockButtonClick()">Unlock</div>
+                    </div>
+                    <div id="Mode" class="Status-item">
+                        <div id="Mode-tittle">Return Base</div>
+                        <div id="Mode-Button-Default" onclick="Post_func()">Default</div>
+                        <div id="Mode-Button-Custom" onclick="get_data_test()">Custom</div>
+                    </div>
+                    <div id="Power" class="Status-item">
+                        <div id="Power-tittle">Power</div>
+                        <div id="Power-Value">OFF</div>
+                        <div id="Power-Button-Turn-on" class="button-power" onclick="Startup_click()">Startup</div>
+                        <div id="Power-Button-Shutdown" class="button-power" onclick="Shutdown_click()">Shutdown</div>
+                    </div>
+                    <div id="Stop" class="Status-item">
+                        <div id="Stop-tittle">Stop</div>
+                        <div id="Mode-Button-Stop">Stop</div>
+                        <div id="Mode-Button-EStop">EStop</div>
+                    </div>
+
+                </div>
+                <div class="moving-parameters-tittle">Moving Parameters</div>
+                <div class="moving-parameters item">
+                    <div class="Joint-acce Joint-acce-val">
+                        <div class="Joint-acce-tittle Joint-item">Angular Acceleration(_/s<sup
+                                style="font-size: 0.6vw;">2</sup>):
+                        </div>
+                        <div id="button-3" class="Joint-item" onclick="init_button_3_4()">+</div>
+                        <input id="number-1" class="Joint-item" contenteditable="true" value="0.0000"
+                            inputmode="numeric" type=" number" step="0.01">
+                        <div id="button-4" onclick="init_button_5_6()">-</div>
+                    </div>
+                    <div class="Joint-vel Joint-vel-val">
+                        <div class="Joint-vel-tittle Joint-item">Joint Velocity(_/min):
+                        </div>
+                        <div id="button-5" class="Joint-item" onclick="init_button_5_6()">+</div>
+                        <input id="number-2" class="Joint-item" contenteditable="true" value="0.0000"
+                            inputmode="numeric" type=" number" step="0.01">
+                        <div id="button-6" onclick="init_button_5_6()">-</div>
+                    </div>
+                    <div class="Axis-line Axis-line-val">
+                        <div class="Axis-line-tittle Axis-item">Linear Acceleration(_/s<sup
+                                style="font-size: 0.6vw;">2</sup>):</div>
+                        <div id="button-7" class="Axis-item" onclick="init_button_7_8()">+</div>
+                        <input id="number-3" class="Joint-item" contenteditable="true" value="0.0000"
+                            inputmode="numeric" type=" number" step="0.01">
+                        <div id="button-8" class="Axis-item" onclick="init_button_7_8()">-</div>
+                    </div>
+                    <div class="Axis-vel Axis-vel-val">
+                        <div class="Axis-val-tittle Axis-item">Axis Velocity(_/min):</div>
+                        <div id="button-31" class="Axis-item" onclick="init_button_31_32()">+</div>
+                        <input id="number-30" class="Joint-item" contenteditable="true" value="0.0000"
+                            inputmode="numeric" type=" number" step="0.01">
+                        <div id="button-32" class="Axis-item" onclick="init_button_31_32()">-</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="New_web_scr_ver_2.js"></script>
+
+</body>
+
+</html>

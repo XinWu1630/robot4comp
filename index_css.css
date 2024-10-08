@@ -1,0 +1,337 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 0 0 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 7.5% 25% 10% 15% 10% 25% 7.5%;
+    grid-template-rows: 15% 70% 15%;
+}
+
+.img1 {
+    position: relative;
+    left: -10%;
+    top: -10%;
+    width: 120%;
+}
+
+.img2 {
+    position: relative;
+    left: -10%;
+    top: -10%;
+    width: 120%;
+}
+
+.overlay {
+    grid-template-columns: 50% 50%;
+    display: grid;
+    grid-column: 1/8;
+    grid-row: 1/4;
+    background-color: #F2f1f0;
+    opacity: 0.25;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#Start-button {
+    grid-row: 4/5;
+    grid-column: 2/3;
+}
+
+.button-app {
+    color: #0D486E;
+    font-size: 2.5vw;
+    text-align: center;
+    padding-top: 7%;
+    display: block;
+    background-color: #CBD6Cb;
+    width: 100%;
+    height: 76%;
+    z-index: 1;
+    overflow: hidden;
+    user-select: none;
+    text-decoration: none;
+    border-radius: 10%;
+    border-color: #DEE1E3;
+    border-style: solid;
+    border-width: 0.15vw;
+    cursor: pointer;
+}
+
+#Control-button {
+    grid-column: 2/3;
+    grid-row: 6/7;
+}
+
+#Setup-button {
+    grid-column: 2/3;
+    grid-row: 8/9;
+}
+
+#History-button {
+    grid-column: 2/3;
+    grid-row: 10/11;
+}
+
+#home-settings {
+    grid-column: 3/6;
+    grid-row: 2/3;
+    position: relative;
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    border: #DEE1E3 solid 0.2vw;
+    box-shadow: 0.1vw 0.1vw 0.5vw 0.04vw #1c1c1c;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 13.5% 1% 11% 15% 2% 15% 2% 15% 2% 15% 8.5%;
+    border-radius: 5%;
+    transition: ease-in-out 1s;
+}
+
+#settings-block {
+    grid-column: 3/6;
+    grid-row: 2/3;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    border: #DEE1E3 solid 0.2vw;
+    box-shadow: 0.1vw 0.1vw 0.5vw 0.04vw #1c1c1c;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 13.5% 1% 11% 72.5% 2%;
+    /* grid-template-rows: 13.5% 1% 11% 12% 1.5% 12% 1.5% 12% 1.5% 12% 1.5% 12% 1.5% 12% 1.5% 12% 1.5% 12% 1.5% 12% 1.5% 12% 1.5% 12% 1.5%; */
+    border-radius: 5%;
+    transition: ease-in-out 1s;
+}
+
+#setting-inside {
+    display: grid;
+    grid-column: 1/4;
+    grid-row: 4/5;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    grid-template-rows: 15% 5% 8% 1.5% 15% 1.5% 15% 1.5% 15% 1.5% 15% 5% 8% 1.5% 15% 1.5% 15% 1.5% 15% 1.5% 15% 1.5%;
+    grid-template-columns: 25% 50% 25%;
+}
+
+#setting-tittle {
+    padding-top: 10%;
+    font-size: 2.4vw;
+    grid-row: 1/2;
+    grid-column: 2/3;
+    color: #0D486E;
+    text-align: center;
+    user-select: none;
+}
+
+#setting-port {
+    display: grid;
+    grid-row: 1/2;
+    grid-column: 1/4;
+    padding-top: 15%;
+    padding-top: 3%;
+    grid-template-columns: 2% 50% 5% 20% 1% 20% 2%;
+}
+
+#line-setting {
+    grid-row: 4/4;
+    grid-column: 1/4;
+    width: 100%;
+    height: 0%;
+    border: #CBD6Cb dashed 0.05vw;
+}
+
+#tittle-max {
+    grid-row: 3/4;
+    grid-column: 1/4;
+    font-size: 1.6vw;
+    padding-left: 2%;
+    color: #0D486E;
+}
+
+#setting-max-angular-acceleration {
+    display: grid;
+    grid-row: 5/6;
+    grid-column: 1/4;
+    padding-top: 3%;
+    grid-template-columns: 2% 50% 5% 20% 1% 20% 2%;
+}
+
+#limit-label-angular-acceleration,
+#limit-label-joint-velocity,
+#limit-label-linear-acceleration,
+#limit-label-axis-velocity,
+#setting-port-tittle,
+#base-label-angular-acceleration,
+#base-label-joint-velocity,
+#base-label-linear-acceleration,
+#base-label-axis-velocity {
+    padding-top: 2%;
+    font-size: 1.3vw;
+    color: #0D486E;
+    grid-row: 1/1;
+    grid-column: 2/3;
+    user-select: none;
+}
+
+#limit-angular-acceleration,
+#limit-joint-velocity,
+#limit-linear-acceleration,
+#limit-axis-velocity,
+#value-port,
+#base-angular-acceleration,
+#base-joint-velocity,
+#base-linear-acceleration,
+#base-axis-velocity {
+    grid-row: 1/1;
+    grid-column: 4/5;
+    height: 50%;
+
+}
+
+#setLimit-angular-acceleration,
+#setLimit-joint-velocity,
+#setLimit-linear-acceleration,
+#setLimit-axis-velocity,
+#setPort-value,
+#setvalue-base-angular-acceleration,
+#setvalue-base-joint-velocity,
+#setvalue-base-linear-acceleration,
+#setvalue-base-axis-velocity {
+    grid-row: 1/1;
+    grid-column: 6/7;
+    height: 60%;
+    color: #0D486E;
+    font-size: 1vw;
+    cursor: pointer;
+}
+
+#setting-max-joint-velocity {
+    display: grid;
+    grid-row: 7/8;
+    grid-column: 1/4;
+    padding-top: 3%;
+    grid-template-columns: 2% 50% 5% 20% 1% 20% 2%;
+}
+
+#setting-max-linear-acceleration {
+    display: grid;
+    grid-row: 9/10;
+    grid-column: 1/4;
+    padding-top: 3%;
+    grid-template-columns: 2% 50% 5% 20% 1% 20% 2%;
+}
+
+#setting-max-axis-velocity {
+    display: grid;
+    grid-row: 11/12;
+    grid-column: 1/4;
+    padding-top: 3%;
+    grid-template-columns: 2% 50% 5% 20% 1% 20% 2%;
+}
+
+#tittle-base {
+    grid-row: 13/14;
+    grid-column: 1/4;
+    font-size: 1.6vw;
+    padding-left: 2%;
+    color: #0D486E;
+}
+
+#line-base {
+    grid-row: 14/14;
+    grid-column: 1/4;
+    width: 100%;
+    height: 0%;
+    border: #CBD6Cb dashed 0.05vw;
+}
+
+#setting-base-axis-velocity {
+    display: grid;
+    grid-row: 21/22;
+    grid-column: 1/4;
+    padding-top: 3%;
+    grid-template-columns: 2% 50% 5% 20% 1% 20% 2%;
+}
+
+#setting-base-linear-acceleration {
+    display: grid;
+    grid-row: 19/20;
+    grid-column: 1/4;
+    padding-top: 3%;
+    grid-template-columns: 2% 50% 5% 20% 1% 20% 2%;
+}
+
+#setting-base-angular-acceleration {
+    display: grid;
+    grid-row: 15/16;
+    grid-column: 1/4;
+    padding-top: 3%;
+    grid-template-columns: 2% 50% 5% 20% 1% 20% 2%;
+}
+
+#setting-base-joint-velocity {
+    display: grid;
+    grid-row: 17/18;
+    grid-column: 1/4;
+    padding-top: 3%;
+    grid-template-columns: 2% 50% 5% 20% 1% 20% 2%;
+}
+
+#home-settings img {
+    grid-row: 1/1;
+    grid-column: 1/1;
+    padding-left: 10%;
+    padding-top: 10%;
+    width: 4vw;
+}
+
+#version {
+    grid-column: 3/4;
+    grid-row: 11/12;
+    font-size: 0.9vw;
+    color: #2A91CF;
+    padding-right: 10%;
+    text-align: end;
+    padding-top: 21%;
+}
+
+#line {
+    grid-row: 3/3;
+    grid-column: 1/4;
+    width: 100%;
+    height: 0%;
+    border: #CBD6Cb dashed 0.05vw;
+}
+
+#tittle {
+    padding-top: 10%;
+    font-size: 2.4vw;
+    grid-row: 1/2;
+    grid-column: 2/3;
+    color: #0D486E;
+    user-select: none;
+}
+
+#home-settings.move {
+    transition: ease 1s;
+    transform: translate(-20vw, 0);
+}
+
+#settings-block {
+    opacity: 0;
+}
+
+#settings-block.move-settings {
+    opacity: 1;
+    transition: ease-in-out 1s;
+    transform: translate(20vw, 0);
+}

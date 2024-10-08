@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Robot3T - home and setup controller</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="pic/logo-robot3t-news-h-1.png">
+    <link rel="stylesheet" type="text/css" href="index_css.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="overlay">
+        <img class="img1" src="pic/LINEAR_Illustrations-removebg.png" alt="">
+        <img class="img2" src="pic/LINEAR_Illustrations-removebg.png" alt="">
+    </div>
+    <div id="settings-block">
+        <div id="setting-tittle">Setup</div>
+        <div id="line"></div>
+        <div id="setting-inside">
+            <div id="setting-port">
+                <label for="value-port" id="setting-port-tittle">Port</label>
+                <input type="text" id="value-port" value="192.168.5.0:5000">
+                <button id="setPort-value">Set Value</button>
+            </div>
+            <div id="line-setting"></div>
+            <div id="tittle-max">Set Max of:</div>
+            <div id="setting-max-angular-acceleration">
+                <label for="limit-angular-acceleration" id="limit-label-angular-acceleration">Angular
+                    Acceleration(_/s<sup style="font-size: 0.6vw;">2</sup>):</label>
+                <input type="number" id="limit-angular-acceleration" value="10000">
+                <button id="setLimit-angular-acceleration">Set Limit</button>
+            </div>
+            <div id="setting-max-joint-velocity">
+                <label for="limit-joint-velocity" id="limit-label-joint-velocity">Joint Velocity(_/min):</label>
+                <input type="number" id="limit-joint-velocity" value="10000">
+                <button id="setLimit-joint-velocity">Set Limit</button>
+            </div>
+            <div id="setting-max-linear-acceleration">
+                <label for="limit-linear-acceleration" id="limit-label-linear-acceleration">Linear Acceleration(_/s<sup
+                        style="font-size: 0.6vw;">2</sup>):</label>
+                <input type="number" id="limit-linear-acceleration" value="10000">
+                <button id="setLimit-linear-acceleration">Set Limit</button>
+            </div>
+            <div id="setting-max-axis-velocity">
+                <label for="limit-axis-velocity" id="limit-label-axis-velocity">Axis Velocity(_/min):</label>
+                <input type="number" id="limit-axis-velocity" value="10000">
+                <button id="setLimit-axis-velocity">Set Limit</button>
+            </div>
+            <div id="tittle-base">Set Base of:</div>
+            <div id="line-base"></div>
+            <div id="setting-base-axis-velocity">
+                <label for="base-axis-velocity" id="base-label-axis-velocity">Axis Velocity(_/min):</label>
+                <input type="number" id="base-axis-velocity" value="1000">
+                <button id="setvalue-base-axis-velocity">Set Base</button>
+            </div>
+            <div id="setting-base-linear-acceleration">
+                <label for="base-linear-acceleration" id="base-label-linear-acceleration">Linear Acceleration(_/s<sup
+                        style="font-size: 0.6vw;">2</sup>):</label>
+                <input type="number" id="base-linear-acceleration" value="1000">
+                <button id="setvalue-base-linear-acceleration">Set Base</button>
+            </div>
+            <div id="setting-base-angular-acceleration">
+                <label for="base-angular-acceleration" id="base-label-angular-acceleration">Angular
+                    Acceleration(_/s<sup style="font-size: 0.6vw;">2</sup>):</label>
+                <input type="number" id="base-angular-acceleration" value="1000">
+                <button id="setvalue-base-angular-acceleration">Set Base</button>
+            </div>
+            <div id="setting-base-joint-velocity">
+                <label for="base-joint-velocity" id="base-label-joint-velocity">Joint Velocity(_/min):</label>
+                <input type="number" id="base-joint-velocity" value="1000">
+                <button id="setvalue-base-joint-velocity">Set Base</button>
+            </div>
+        </div>
+
+    </div>
+    <div id="home-settings" class="display-home">
+        <div id="line"></div>
+        <div id="tittle">Home Controller</div>
+        <a href="New_web_ver_2.html" id="Start-button" class="button-app">Start</a>
+        <div id="Control-button" class="button-app">Manual</div>
+        <div id="Setup-button" class="button-app move" onclick="setup()">Setup</div>
+        <div id="History-button" class="button-app">History</div>
+        <div id="version">Version 1.0.1</div>
+    </div>
+
+
+
+    <script src="index_scr.js"></script>
+</body>
+
+</html>
